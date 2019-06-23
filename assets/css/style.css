@@ -1,8 +1,35 @@
 body {
-    box-sizing: border-box;
-  }
-
-.cal-container {
-    text-align: center;
-    border: solid 1px black;
+    background-image: url("../images/restaurant_icons.png");
 }
+
+.jumbotron {
+    background-color: paleturquoise;
+}
+
+.cal-wrap {
+    float: left;
+}
+
+.btn-group {
+    width: 60%;
+}
+
+.input-display {
+    border: solid 1px black; 
+    width: 40%;
+    height: inherit;
+    margin: 0px 0px 4px 0px;
+}
+
+.btn {
+    font-size: 1.5em;
+    margin: 0px 4px 4px 0px;
+    padding: 20px;
+}
+
+h4 {
+    position: relative;
+    top: 22px;
+}
+
+
