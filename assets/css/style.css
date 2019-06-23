@@ -1,0 +1,8 @@
+body {
+    box-sizing: border-box;
+  }
+
+.cal-container {
+    text-align: center;
+    border: solid 1px black;
+}
