@@ -15,7 +15,7 @@ body {
     width: 60%;
 }
 
-.input-display {
+.display {
     border: solid 1px black; 
     width: 40%;
     height: inherit;
@@ -28,7 +28,7 @@ body {
     padding: 20px;
 }
 
-h4 {
+h5 {
     position: relative;
     top: 22px;
 }

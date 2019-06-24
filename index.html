@@ -30,41 +30,42 @@
             <div class="cal-wrap col-12 col-sm-12 col-md-8 col-lg-8">
                 <div class="row">
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" data-num="1" class="btn btn-dark">1</button>
-                        <button type="button" data-num="2" class="btn btn-dark">2</button>
-                        <button type="button" data-num="3" class="btn btn-dark">3</button>
+                        <button type="button" data-num="1" class="num-btn btn btn-dark">1</button>
+                        <button type="button" data-num="2" class="num-btn btn btn-dark">2</button>
+                        <button type="button" data-num="3" class="num-btn btn btn-dark">3</button>
                     </div>
-                    <div class="input-display">
-                        <h4 id="total">Meal Total: </h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="btn-group" role="group">
-                        <button type="button" data-num="4" class="btn btn-dark">4</button>
-                        <button type="button" data-num="5" class="btn btn-dark">5</button>
-                        <button type="button" data-num="6" class="btn btn-dark">6</button>
-                    </div>
-                    <div class="input-display">
-                        <h4 id="percentage">% Tip: </h4>
+                    <div data-focus="focused" id="total-dis" class="display input-display">
+                        <h5>Meal Total: <span id="total"></span> </h5>
                     </div>
                 </div>
                 <div class="row">
                     <div class="btn-group" role="group">
-                        <button type="button" data-num="7" class="btn btn-dark">7</button>
-                        <button type="button" data-num="8" class="btn btn-dark">8</button>
-                        <button type="button" data-num="9" class="btn btn-dark">9</button>
+                        <button type="button" data-num="4" class="num-btn btn btn-dark">4</button>
+                        <button type="button" data-num="5" class="num-btn btn btn-dark">5</button>
+                        <button type="button" data-num="6" class="num-btn btn btn-dark">6</button>
                     </div>
-                    <div class="input-display">
-                            <h4 id="split">Split By:</h4>
+                    <div data-focus="focused" id="perc-dis" class="display input-display">
+                        <h5>% Tip: <span id="perc"></span></h5>
                     </div>
                 </div>
                 <div class="row">
                     <div class="btn-group" role="group">
-                        <button type="button" data-num="0" class="btn btn-dark">0</button>
+                        <button type="button" data-num="7" class="num-btn btn btn-dark">7</button>
+                        <button type="button" data-num="8" class="num-btn btn btn-dark">8</button>
+                        <button type="button" data-num="9" class="num-btn btn btn-dark">9</button>
+                    </div>
+                    <div data-focus="focused" id="split-dis" class="display input-display">
+                            <h5>Split By: <span id="split"></span></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="btn-group" role="group">
+                        <button type="button" data-num="0" class="num-btn btn btn-dark">0</button>
+                        <button type="button" data-num="." class="num-btn btn btn-dark">.</button>
                         <button type="button" class="cal-btn btn btn-warning">Calculate</button>
                     </div>
-                    <div class="input-display">
-                            <h4 id="total">$ Per Tipper: </h4>
+                    <div data-focus="focused" id="tip-tot-dis" class="display output-display">
+                            <h5>$ Per Tipper: <span id="tip-tot"></span></h5>
                     </div>
                 </div>
 
