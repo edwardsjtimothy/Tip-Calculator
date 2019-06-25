@@ -24,13 +24,13 @@ $(function() {
 
     //sets initial focus to total input display 
 
-    $("#total-dis").css("border", "3px solid rgb(241, 185, 29)");
+    $("#total-dis").css("border", "3px solid rgb(240, 173, 78)");
 
     //focus on clicked input element and display 
    
     $(".input-display").click(function() {
         $(".input-display").css("border","solid 1px black");
-        $(this).css("border", "3px solid rgb(241, 185, 29)");
+        $(this).css("border", "3px solid rgb(240, 173, 78)");
         $(this).find("input").focus();
     });
 
@@ -60,7 +60,7 @@ $(function() {
         $("input").val("");
         $("#split").val(1);
         $(".input-display").css("border","solid 1px black");
-        $("#total-dis").css("border", "3px solid rgb(241, 185, 29)");
+        $("#total-dis").css("border", "3px solid rgb(240, 173, 78)");
         $("#total").focus();
         $("#tip-tot").html("");
 
@@ -79,9 +79,6 @@ $(function() {
 
         var result = total * perc / split;
         $("#tip-tot").html(parseFloat(result).toFixed(2));
-
-
-
     });
 
     //limits input of total to two digits after decimal 
@@ -96,5 +93,4 @@ $(function() {
            }            
         });
        });
-
 });
