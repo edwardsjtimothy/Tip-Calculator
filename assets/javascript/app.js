@@ -1,6 +1,5 @@
 $(function() {
 
-
     $("#total-dis").css("border", "3px solid rgb(241, 185, 29)");
    
     $(".input-display").click(function() {
@@ -9,24 +8,32 @@ $(function() {
         $(this).find("input").focus();
     });
     
+
+    //number buttons printing to selected input fields
     $(".num-btn").click(function() {
         var selectedButton = $(this).html();
-    
+
        
+    
+
     });
 
+    //clear input field on click 
+
+    $(".bac-btn").click(function() {
+        $("input").text("");
+
+    });
 
 
     //calculate on click of calculate button
     $(".cal-btn").click(function() {
-        var total = parseFloat($("#total").val().trim());
-        var perc = parseFloat($("#perc").val().trim()) / 100;
-        var split = parseFloat($("#split").val().trim());
+        var total = $("#total").val().trim();
+        var perc = $("#perc").val().trim()/ 100;
+        var split = $("#split").val().trim();
 
         var result = total * perc / split;
-        console.log(result);
-
-
+        $("#tip-tot").html(parseFloat(result)).tofixed(2);
     });
 
 

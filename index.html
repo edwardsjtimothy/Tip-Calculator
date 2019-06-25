@@ -35,7 +35,7 @@
                         <button type="button" class="num-btn btn btn-dark">3</button>
                     </div>
                     <div id="total-dis" class="display input-display">
-                        <h5>Total: $ <input autofocus id="total"></input> </h5>
+                        <h5>Total: $ <input autofocus type="number" id="total"></input></h5>
                     </div>
                 </div>
                 <div class="row">
@@ -45,7 +45,7 @@
                         <button type="button" class="num-btn btn btn-dark">6</button>
                     </div>
                     <div id="perc-dis" class="display input-display">
-                        <h5>% Tip: <input id="perc"></input></h5>
+                        <h5>% Tip: <input type="number" id="perc"></input></h5>
                     </div>
                 </div>
                 <div class="row">
@@ -55,17 +55,22 @@
                         <button type="button" class="num-btn btn btn-dark">9</button>
                     </div>
                     <div id="split-dis" class="display input-display">
-                            <h5>Split By: <input id="split"></input></h5>
+                        <h5>Split By: <input type="number" id="split"></input></h5>
                     </div>
                 </div>
                 <div class="row">
                     <div class="btn-group" role="group">
                         <button type="button" class="num-btn btn btn-dark">0</button>
                         <button type="button" class="num-btn btn btn-dark">.</button>
-                        <button type="button" class="cal-btn btn btn-warning">Calculate</button>
                     </div>
                     <div id="tip-tot-dis" class="display output-display">
-                            <h5>$ Per Tipper: $ <span id="tip-tot"></span></h5>
+                        <h5>$ Per Tipper: $ <span id="tip-tot"></span></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="cal-btn btn btn-warning">Calculate</button>
+                        <button type="button" class="bac-btn btn btn-danger">Clear</button>
                     </div>
                 </div>
 
