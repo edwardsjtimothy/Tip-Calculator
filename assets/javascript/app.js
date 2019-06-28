@@ -54,12 +54,20 @@ $(function () {
                     myNum = myNum + ".";
                     floatingPoint = true;
                 } else {
-                    if (floatingPoint) decimalCount--;
-                    if (decimalCount > 0) myNum = myNum + "" + selectedVal
+                    
+                    if (floatingPoint) {
+                        decimalCount--;
+                    };
+                    if (decimalCount > 0) {
+                     myNum = myNum + "" + selectedVal;
+                    };
                 };
 
-                if (selectedButton !== ".") return parseFloat(myNum)
-                else return (parseFloat(myNum).toFixed(2));
+                if (selectedButton !== ".") {
+                    return parseFloat(myNum)
+                } else {
+                    return (parseFloat(myNum).toFixed(2));
+                };
             });
 
         } else if (percFocused === true) {
@@ -96,7 +104,7 @@ $(function () {
 
     $(".clear-btn").click(function () {
         $("input").val("");
-        $("#split").val(1);
+        $("#split").val("");
         $(".input-display").css("border", "solid 1px black");
         $("#total-dis").css("border", "3px solid rgb(240, 173, 78)");
         $("#total").focus();
@@ -126,17 +134,20 @@ $(function () {
         var total = $("#total").val().trim();
         var perc = $("#perc").val().trim() / 100;
         var split = $("#split").val().trim();
-        var result = total * perc / split;
+    
 
         //checking for empty strings
-
-        if (split === "" || split === 0) {
+        if (split === "" || split === "0") {
             split = 1;
         };
 
         if (perc === "") {
             result = total / split;
         };
+
+        // the math 
+
+        var result = total * perc / split;
 
         //checking for invalid input and throwing error popover if found
 
@@ -153,6 +164,7 @@ $(function () {
             $("#tip-tot").html(parseFloat(result).toFixed(2));
 
             //reseting html keypad variables 
+
             floatingPoint = false;
             decimalCount = 3;
             myNum = "";
