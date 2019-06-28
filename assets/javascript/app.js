@@ -49,8 +49,8 @@ $(function() {
         if (totalFocused === true) {
             $("#total").val(function(index, val) {
                 
-                //input fields with type="number" do not like decimals. 
-                //this is a work around
+                //input fields with type="number" do not like decimals when using html key pad. This is a work around. 
+
                 if(selectedButton === "." && floatingPoint === false){ 
                     myNum = myNum + ".";
                     floatingPoint = true; 
@@ -62,6 +62,7 @@ $(function() {
                 if(selectedButton !== ".") return parseFloat(myNum)
                 else return (parseFloat(myNum).toFixed(2));
             });
+            
         } else if (percFocused === true) {
             $("#perc").val(function(index, val) {
                 return val + selectedButton;
@@ -73,9 +74,21 @@ $(function() {
         };
     });
 
+    //backspace 
+
+    $(".back-btn").click(function() {
+        if (totalFocused === true) {
+            var value = $("#total").val();
+            console.log(value);
+            $("#total").val() = value.substr(0, value.length - 1);
+            console.log(value);
+        }
+
+    });
+
     //reset 
 
-    $(".bac-btn").click(function() {
+    $(".clear-btn").click(function() {
         $("input").val("");
         $("#split").val(1);
         $(".input-display").css("border","solid 1px black");
