@@ -79,9 +79,16 @@ $(function() {
     $(".back-btn").click(function() {
         if (totalFocused === true) {
             var value = $("#total").val();
-            console.log(value);
-            $("#total").val() = value.substr(0, value.length - 1);
-            console.log(value);
+            value = value.substr(0, value.length - 1);
+            $("#total").val(value);
+        } else if (percFocused === true) {
+            var value = $("#perc").val();
+            value = value.substr(0, value.length - 1);
+            $("#perc").val(value);
+        } else if (splitFocused === true) {
+            var value = $("#split").val();
+            value = value.substr(0, value.length - 1);
+            $("#split").val(value);
         }
 
     });
