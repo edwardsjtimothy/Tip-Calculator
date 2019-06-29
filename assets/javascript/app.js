@@ -44,7 +44,6 @@ $(function () {
     $(".num-btn").click(function () {
         var selectedButton = $(this).html();
         var selectedVal = parseFloat(selectedButton);
-        var btnString = selectedButton + $(this).html();
 
         if (totalFocused === true) {
             $("#total").val(function (index, val) {
@@ -140,9 +139,9 @@ $(function () {
             $(".cal-btn").popover("show");
             $("#perc").val("");
         } else if (Math.sign(parseFloat(split)) === -1) {
-            $(".cal-btn").attr("data-content", "The tip can't be by a negative number.")
+            $(".cal-btn").attr("data-content", "The tip can't be split by a negative number.")
             $(".cal-btn").popover("show");
-            $("#perc").val("");
+            $("#split").val("");
         } else {
             
             $("#tip-tot").html(parseFloat(result).toFixed(2));
