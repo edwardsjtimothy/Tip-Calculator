@@ -44,6 +44,7 @@ $(function () {
     $(".num-btn").click(function () {
         var selectedButton = $(this).html();
         var selectedVal = parseFloat(selectedButton);
+        var btnString = selectedButton + $(this).html();
 
         if (totalFocused === true) {
             $("#total").val(function (index, val) {
@@ -79,25 +80,6 @@ $(function () {
                 return val + selectedButton;
             });
         };
-    });
-
-    //backspace 
-
-    $(".back-btn").click(function () {
-        if (totalFocused === true) {
-            var value = $("#total").val();
-            value = value.substr(0, value.length - 1);
-            $("#total").val(value);
-        } else if (percFocused === true) {
-            var value = $("#perc").val();
-            value = value.substr(0, value.length - 1);
-            $("#perc").val(value);
-        } else if (splitFocused === true) {
-            var value = $("#split").val();
-            value = value.substr(0, value.length - 1);
-            $("#split").val(value);
-        }
-
     });
 
     //reset 
@@ -139,6 +121,7 @@ $(function () {
         //checking for empty strings
         if (split === "" || split === "0") {
             split = 1;
+            $("#split").val(split);
         };
 
         if (perc === "") {
@@ -159,6 +142,10 @@ $(function () {
             $(".cal-btn").attr("data-content", "The tip percentage can't be 0 or a negative number.")
             $(".cal-btn").popover("show");
             $("#perc").val("");
+        } else if (Math.sign(parseFloat(split)) === -1) {
+            $(".cal-btn").attr("data-content", "The tip can't be by a negative number.")
+            $(".cal-btn").popover("show");
+            $("#perc").val("");
         } else {
             
             $("#tip-tot").html(parseFloat(result).toFixed(2));
@@ -168,7 +155,6 @@ $(function () {
             floatingPoint = false;
             decimalCount = 3;
             myNum = "";
-
         };
     });
 
