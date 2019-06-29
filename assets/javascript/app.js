@@ -100,9 +100,6 @@ $(function () {
         myNum = "";
     });
 
-
-
-
     //calculate on click of calculate button
 
     $(".cal-btn").click(function () {
